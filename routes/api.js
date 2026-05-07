@@ -125,6 +125,9 @@ router.get('/local/info/wireless', map2dorita('local', 'getWirelessStatus'));
 router.get('/local/info/lastwireless', map2dorita('local', 'getWirelessLastStatus'));
 router.get('/local/info/mission', map2dorita('local', 'getMission'));
 router.get('/local/info/sys', map2dorita('local', 'getSys'));
+router.get('/local/info/camera', map2dorita('local', 'getCamera'));
+router.get('/local/info/location', map2dorita('local', 'getLocation'));
+router.get('/local/info/pmapid', map2dorita('local', 'getPmapid'));
 
 if (firmwareVersion === 2) {
   router.get('/local/info/state', map2dorita('local', 'getRobotState'));
