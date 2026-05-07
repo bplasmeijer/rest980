@@ -56,6 +56,8 @@ omit `DEBUG=rest980:*` if you want. You can just run with `npm start`
 
 You can use [koalazak/rest980](https://hub.docker.com/r/koalazak/rest980/) docker image to run this server in a docker container. Usefull to run on [Synology](https://www.synology.com/en-global/) for example.
 
+### Docker Hub
+
 Pull Docker image:
 ```bash
 docker pull koalazak/rest980
@@ -64,6 +66,30 @@ docker pull koalazak/rest980
 Run Docker image:
 ```
 docker run -p 3000:3000 -e BLID=myuser -e PASSWORD=mypass -e ROBOT_IP=myrobotIP koalazak/rest980
+```
+
+### GitHub Container Registry
+
+Pull Docker image:
+```bash
+docker pull ghcr.io/koalazak/rest980
+```
+
+Run Docker image:
+```
+docker run -p 3000:3000 -e BLID=myuser -e PASSWORD=mypass -e ROBOT_IP=myrobotIP ghcr.io/koalazak/rest980
+```
+
+### bplasmeijer Image
+
+Pull Docker image:
+```bash
+docker pull bplasmeijer/rest980
+```
+
+Run Docker image:
+```
+docker run -p 3000:3000 -e BLID=myuser -e PASSWORD=mypass -e ROBOT_IP=myrobotIP bplasmeijer/rest980
 ```
 
 ## Dockerfile
@@ -152,6 +178,9 @@ Available records:
 - sys
 - sku
 - state (only in firmware 2)
+- camera
+- location
+- pmapid
 
 Example: get current mission variables
 ```http
